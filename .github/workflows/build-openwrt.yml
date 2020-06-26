@@ -98,7 +98,15 @@ jobs:
         make download -j8
         find dl -size -1024c -exec ls -l {} \;
         find dl -size -1024c -exec rm -f {} \;
-
+        
+    - name: Download package
+      id: package
+      run: |
+        cd package
+        mkdir openwrt-packages
+        cd openwrt-packages
+        git clone https://github.com/rayqu918/openwrt-packages.git
+      
     - name: Compile the firmware
       id: compile
       run: |
