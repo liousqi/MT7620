@@ -14,4 +14,6 @@
 # Add a feed source
 #sed -i '$a src-git lienol https://github.com/Lienol/openwrt-package' feeds.conf.default
 #git clone https://github.com/rayqu918/openwrt-packages.git
-# git clone https://github.com/rayqu918/openwrt-packages.git
+git clone https://github.com/rayqu918/openwrt-packages.git
+./scripts/feeds update -a
+./scripts/feeds install -a
